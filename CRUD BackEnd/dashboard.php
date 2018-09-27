@@ -27,8 +27,6 @@
   $limite = mysqli_query($conn, $sql);
   $todos = mysqli_query($conn, $busca);
 
-  $tr = mysqli_num_rows($todos);
-  $tp = $tr / $total_reg; // verifica o número total de páginas
  ?>
 
 
@@ -57,37 +55,40 @@
       </nav>
     </header>
     <div class="container">
-      <div class="col-md-12">
-      <table class="table table-light">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Email</th>
-        </tr>
-      </thead>
-        <tbody>
-          <?php
-            // vamos criar a visualização
-            while ($usuario = mysqli_fetch_assoc($limite)) {
-              $nome = $usuario["nome"];
-              $email = $usuario["email"];
-              $idusuario = $usuario["idusuario"];
+      <div class="row">
+        <div class="col-md-12">
+        <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+          <tbody>
+            <?php
+              // vamos criar a visualização
+              while ($usuario = mysqli_fetch_assoc($limite)) {
+                $nome = $usuario["nome"];
+                $email = $usuario["email"];
+                $idusuario = $usuario["idusuario"];
 
-              echo <<< EOT
+                echo <<< EOT
 
-               <tr>
-                 <th scope="row"> $idusuario</th>
-                 <td>$nome </td>
-                 <td>$email </td>
-               </tr>
+                 <tr>
+                   <th scope="row"> $idusuario</th>
+                   <td>$nome </td>
+                   <td>$email </td>
+                 </tr>
 EOT;
-            }
-          ?>
-        </tbody>
-        </table>
+              }
+            ?>
+          </tbody>
+          </table>
+        </div>
       </div>
       <div class="row">
+        <div class="col-md-12">
         <?php
         // agora vamos criar os botões "Anterior e próximo"
         $anterior = $pc - 1;
@@ -96,8 +97,11 @@ EOT;
           echo <<< EOT
           <a href='?pagina=$anterior'><button type='button' class='btn btn-outline-success'> Anterior </button></a>
           <a href='?pagina=$proximo'><button type='button' class='btn btn-outline-warning'> Proximo </button></a>
+          <a href='register.php'><button type='button' class='btn btn-outline-danger'> Registar novo Usuário </button></a>
 EOT;
         ?>
+
+        </div>
       </div>
     </div>
   </body>

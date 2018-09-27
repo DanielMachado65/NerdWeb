@@ -14,18 +14,6 @@
     <title> Teste da Aplicação </title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-light bg-light">
-        <div class="col-md-5">
-          <a href="register.php">
-            <button type="button" class="btn btn-outline-secondary"> Registar</button>
-          </a>
-          <a href="dashboard.php?pagina=1">
-            <button type="button" class="btn btn-outline-secondary"> Usuários </button>
-          </a>
-        </div>
-      </nav>
-    </header>
      <div class="container">
        <div class="row">
          <div class="col-md-12">
@@ -39,19 +27,24 @@
              </code></p>
            </p>
            <p>
-             <h4>   2 - Criar um formulario de inclusao de usuarios em PHP:</h4>
+             <h4>2 - Criar um formulario de inclusao de usuarios em PHP:</h4>
              <p>Campos do formulario: nome e e-mail
                O sisteminha deve ter tratamento de erro, ou seja, verificar se o e-mail já existe no banco de dados, caso ele já esteja cadastrado, mostrar mensagem de erro, caso contrario, cadastrar usuario.
                O codigo deve ser limpo, comentado se necessario e otimizado, as conexoes devem ser fechadas ao final da execucao do script.
              </p>
            </p>
            <p>
-             <h4>  3 - Criar uma pagina que mostre os usuarios de 10 em 10 (paginacao)</h4>
+             <h4>3 - Criar uma pagina que mostre os usuarios de 10 em 10 (paginacao)</h4>
              <p>
                Observacao:
                As paginas web devem ser formatadas por CSS a seu criterio. Pode usar apenas fonte verdana tamanho 10 se quiser, basta mostrar que voce sabe usar o CSS
              </p>
            </p>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-12">
+          <a href='dashboard.php?pagina=1'><button type='button' class='btn btn-outline-success'> Começar o teste </button></a>
          </div>
        </div>
      </div>

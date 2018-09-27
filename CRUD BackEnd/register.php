@@ -46,8 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <header>
     <nav class="navbar navbar-light bg-light">
       <nav class="navbar navbar-light bg-light">
-        <a href="home.php">
-          <button type="button" class="btn btn-outline-secondary"> Home </button>
+        <a href="dashboard.php?pagina=1">
+          <button type="button" class="btn btn-outline-secondary"> Usuários </button>
         </a>
       </nav>
     </nav>
@@ -65,12 +65,13 @@ EOT;
 EOT;
   } elseif ($error) {
     echo <<< EOT
-    <h4> $error_msg </h4>
+    <div class="alert alert-danger" role="alert">
+       Email já cadastrado no Banco de Dados
+    </div>
 EOT;
   }
 
   echo <<< EOT
-
     <div class="col-md-12">
       <form action="register.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
