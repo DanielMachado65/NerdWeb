@@ -1,0 +1,23 @@
+### Tarefa:
+
+1 - Criar uma tabela de usuarios no banco de dados com os seguintes campos:
+
+codigo do usuario (chave primaria)
+nome
+email (indexado e unico)
+
+
+2 - Criar um formulario de inclusao de usuarios em PHP:
+
+Campos do formulario: nome e e-mail
+
+O sisteminha deve ter tratamento de erro, ou seja, verificar se o e-mail já existe no banco de dados, caso ele já esteja cadastrado, mostrar mensagem de erro, caso contrario, cadastrar usuario.
+
+O codigo deve ser limpo, comentado se necessario e otimizado, as conexoes devem ser fechadas ao final da execucao do script.
+
+
+3 - Criar uma pagina que mostre os usuarios de 10 em 10 (paginacao)
+
+
+Observacao:
+As paginas web devem ser formatadas por CSS a seu criterio. Pode usar apenas fonte verdana tamanho 10 se quiser, basta mostrar que voce sabe usar o CSS.
