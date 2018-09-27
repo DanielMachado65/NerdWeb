@@ -1,0 +1,24 @@
+/* ============================================ */
+/* CSS By NerdWeb - http://nerdweb.com.br */
+/* ============================================ */
+/*== main menu footer ==*/
+.ft-menu {width: 100%;float: left;}
+.ft-menu ul {width: 100%;max-width: 405px;margin: 0 auto;}
+.ft-menu ul li {position: relative;float: left;display: inline-block!important;margin-right: 15px;}
+.ft-menu ul li:last-child {margin-right: 0;}
+.ft-menu ul li a {cursor: pointer;position: relative;color: #ffffff;font-size: 14px;font-weight: 400;font-family: 'Open Sans', sans-serif;}
+.ft-menu ul li a:hover {color: #ff4e00;}
+.ft-menu .ativ {color: #ff4e00;font-weight: bold;}
+/*== Copyright ==*/
+.ft-copyright {width: 100%;float: left;margin-top: 35px;}
+.ft-copyright h1 {width: 100%;float: left;color: #ffffff;font-size: 12px;font-weight: 400;text-align: center;font-family: 'Roboto', sans-serif;}
+.ft-copyright a {width: 100%;color: #ffffff!important;text-decoration: none;font-family: 'Roboto', sans-serif;}
+.ft-copyright a:hover {color: #248ed8!important;}
+/*== Mobile ==*/
+@media all and (max-width:767px){
+	.ft-menu {display: none;}
+	.ft-copyright {margin-top: 5px;}
+}
+/* ============================================ */
+/* CSS By NerdWeb - http://nerdweb.com.br */
+/* ============================================ */
