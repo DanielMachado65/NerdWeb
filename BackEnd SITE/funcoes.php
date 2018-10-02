@@ -1,6 +1,6 @@
 <?php
-$configDB["User"] = "";
-$configDB["Name"] = "";
+$configDB["User"] = "root";
+$configDB["Name"] = "backnerdwerb";
 $configDB["Pass"] = "";
 $configDB["Host"] = "localhost";
 $configDB["Port"] = 3306;
@@ -42,7 +42,10 @@ function insereNoticia($titulo,$texto) {
     $pdo = ConnectaNoBanco();
 
     $query = $pdo->prepare('INSERT INTO `noticias` (`titulo`, `texto`) VALUES (?, ?);');
-    $query->execute(array($titulo,$texto));
+    if($query->execute(array($titulo,$texto))){
+      return true;
+    }else
+      return false;
 }
 
 
@@ -50,9 +53,31 @@ function insereNoticia($titulo,$texto) {
 /* FUNÇÃO DE LISTAGEM DE NOTÍCIA */
 function listaNoticia() {
     $pdo = ConnectaNoBanco();
-
     $query = $pdo->prepare('SELECT * FROM `noticias`');
     $query->execute();
 
     return $query->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function carregaRegistro($id){
+  $pdo = ConnectaNoBanco();
+  $query = $pdo->prepare('SELECT * FROM `noticias` where `idnoticias` = (?)');
+  $query->execute(array($id));
+  return $query->fetch();
+}
+
+function editarNoticia($id, $titulo, $texto){
+  $pdo = ConnectaNoBanco();
+  $query = $pdo->prepare('UPDATE `noticias` SET `idnoticias`=(?),`titulo`=(?), `texto`=(?) where `idnoticias`=(?);');
+  if($query->execute(array($id,$titulo,$texto,$id))){
+    return true;
+  }else
+    return false;
+}
+
+function verifica_campo($texto){
+  $texto = trim($texto);
+  $texto = stripslashes($texto);
+  $texto = htmlspecialchars($texto);
+  return $texto;
 }

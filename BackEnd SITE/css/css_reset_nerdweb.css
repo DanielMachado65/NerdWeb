@@ -1,38 +1,179 @@
 /* ============================================ */
 /* CSS Reset By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */
-html {font-size:100%;}
-html,body,object,iframe,section,footer,header,article,aside,div,span,p,h1,h2,h3,h4,h5,h6,hgroup,menu,nav,form,label,button,input,textarea,select,dl,dt,dd,ol,ul,li,tbody,tfoot,thead,tr,th,td,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,fieldset,legend,table,caption,canvas,details,figcaption,figure,summary,time,mark,audio,video {margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;}
-nav ul,nav ol,ul,ol,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {list-style:none;list-style-image:none;list-style-type:none;display:block;}
-img {border:0;margin:0;padding:0;}
-fieldset {border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em;}
-legend {border:0;padding:0;white-space:normal;margin-left:-7px;}
-figure {margin:0;padding:0;}
-audio,canvas,video {display:inline-block;display:inline;;}
-audio:not([controls]) {display:none;height:0;}
-[hidden] {display:none;}
-blockquote,q {quotes:none;}
-blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
-a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;}
-a:focus {outline:thin dotted;}
-a:active,a:hover {outline:0;}
-mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
-del {text-decoration:line-through;}
-abbr[title],dfn[title] {border-bottom:1px dotted;cursor:help;}
-table {border-collapse:collapse;border-spacing:0;}
-hr {display:block;border:0;margin:0;padding:0;}
-button,input,select,textarea {vertical-align:baseline;vertical-align:middle;}
-button,input {line-height:normal;}
-button,html input[type="button"],input[type="reset"],input[type="submit"] {cursor:pointer;overflow:visible;}
-button[disabled],input[disabled] {cursor:default;}
-input[type="checkbox"],input[type="radio"] {box-sizing:border-box;padding:0;margin:0;height:15px;width:15px;}
-textarea {overflow:auto;vertical-align:top;}
-table {border-collapse:collapse;border-spacing:0;}
-svg:not(:root) {overflow:hidden;}
-span.skype_pnh_container {display:none !important;}
-span.skype_pnh_print_container {display:inline !important;}
-span[class^='skype_pnh_container'] {display:none !important;}
-span[class^='skype_pnh_print_container'] {display:inline !important;}
+html {
+  font-size: 100%;
+}
+
+html, body, object, iframe, section, footer, header, article, aside, div, span, p, h1, h2, h3, h4, h5, h6, hgroup, menu, nav, form, label, button, input, textarea, select, dl, dt, dd, ol, ul, li, tbody, tfoot, thead, tr, th, td, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, fieldset, legend, table, caption, canvas, details, figcaption, figure, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+nav ul, nav ol, ul, ol, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  display: block;
+}
+
+img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  margin-left: -7px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  display: inline;
+  ;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  overflow: visible;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+span.skype_pnh_container {
+  display: none !important;
+}
+
+span.skype_pnh_print_container {
+  display: inline !important;
+}
+
+span[class^='skype_pnh_container'] {
+  display: none !important;
+}
+
+span[class^='skype_pnh_print_container'] {
+  display: inline !important;
+}
+
 /* ============================================ */
 /* CSS Reset By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */

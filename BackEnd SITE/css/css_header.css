@@ -2,47 +2,233 @@
 /* CSS By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */
 /*== logo header ==*/
-.logo {width:100%;max-width: 235px;float: left;}
-.logo img {width: 100%;float: left;}
+.logo {
+  width: 100%;
+  max-width: 235px;
+  float: left;
+}
+
+.logo img {
+  width: 100%;
+  float: left;
+}
+
 /*== menu  header ==*/
-.menu {width: auto;float: right;}
-.menu * {box-sizing: border-box;}
-.menu ul {margin: 0;padding: 0;float: left;}
-.menu ul:after {content: "";display: table;clear: both;}
-.menu ul li {position: relative;float: left;display: inline-block!important;margin-left: 38px;}
-.menu ul li a {cursor: pointer;position: relative;color: #0a1826;font-size: 14px;font-weight: 400;font-family: 'Open Sans', sans-serif;}
-.menu ul li a:hover {color: #ff4e00;}
-.menu li:hover > ul {opacity: 1;visibility: visible;margin: 0;}
-.menu .ativ {color: #ff4e00;font-weight: bold;}
-.menu input[type=checkbox]{position: absolute;top: -9999px;left: -9999px;}
-.menu label {display: none;}
+.menu {
+  width: auto;
+  float: right;
+}
+
+.menu * {
+  box-sizing: border-box;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.menu ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.menu ul li {
+  position: relative;
+  float: left;
+  display: inline-block !important;
+  margin-left: 38px;
+}
+
+.menu ul li a {
+  cursor: pointer;
+  position: relative;
+  color: #0a1826;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu ul li a:hover {
+  color: #ff4e00;
+}
+
+.menu li:hover>ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
+.menu .ativ {
+  color: #ff4e00;
+  font-weight: bold;
+}
+
+.menu input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.menu label {
+  display: none;
+}
+
 /*== Mobile ==*/
-@media screen and (max-width: 810px){
-	.menu ul li {margin-left: 20px;}
-	.logo {width:100%;max-width: 200px;float: left;}
+@media screen and (max-width: 810px) {
+  .menu ul li {
+    margin-left: 20px;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 200px;
+    float: left;
+  }
 }
-@media screen and (max-width: 767px){
-	.logo {margin: 0 auto;float: none;margin-top: 0;}
-	.menu {width: 100%;max-width: 100%;float: left;margin: 0;position: relative;top: 20px;z-index: 98;font-family:"Arial", Helvetica, sans-serif!important;}
-	.menu .ativ {color: #1e355e;border-bottom: none;}
-	.menu label {width: 100%;height: auto;margin: 0;padding: 0;color: #ffffff!important;text-transform: uppercase;position: relative;display: block;line-height: 36px;background-color: #1e355e;}
-	.menu label:before {width: auto;height: 40px;margin: 0 5px 0 30px;padding: 0;content: "\2261";font-size:22px;position: relative;top: 1px;line-height: 35px;font-weight: 300;}
-	.menu ul {width: 100%;position: relative;margin: 16px 0 0 0;padding: 0;background-color: #ffffff;border: 1px #1e355e solid;}
-	.menu ul li {width: 100%;display: block;margin: 0;padding: 0!important;float: left;border-bottom: 1px #1e355e solid;}
-	.menu ul li:first-child a:after {content:'';position: absolute;left: 22px;top: -10px;width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #1e355e;}
-	.menu ul li:last-child {border-bottom: none;}
-	.menu ul li span {display: none;}
-	.menu ul li a {width: 100%;float: none;display: block;padding: 10px 0;font-size: 16px;margin: 0;padding-left: 25px;border-left: 5px #ffffff solid;border-bottom: none;}
-	.menu ul li a:hover {border-left: 5px #1e355e solid;border-bottom: none;}
-	.menu ul, .menu ul ul {visibility: visible;opacity: 1;display: none;}
-	.menu ul ul li:first-child a:after {content: none;}
-	.menu input[type=checkbox] ~ ul {display: none;}
-	.menu input[type=checkbox] ~ ul ul {display: none;}
-	.menu input[type=checkbox]:checked ~ ul {display: block;}
-	.menu input[type=checkbox]:checked ~ ul ul {display: block;}
-	.menu ul ul li:first-child a {margin-top: 0;border-top: 1px #ffffff solid;}
-	.menu ul ul li:last-child a {margin-bottom: 0;}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    margin: 0 auto;
+    float: none;
+    margin-top: 0;
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    z-index: 98;
+    font-family: "Arial", Helvetica, sans-serif !important;
+  }
+
+  .menu .ativ {
+    color: #1e355e;
+    border-bottom: none;
+  }
+
+  .menu label {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    line-height: 36px;
+    background-color: #1e355e;
+  }
+
+  .menu label:before {
+    width: auto;
+    height: 40px;
+    margin: 0 5px 0 30px;
+    padding: 0;
+    content: "\2261";
+    font-size: 22px;
+    position: relative;
+    top: 1px;
+    line-height: 35px;
+    font-weight: 300;
+  }
+
+  .menu ul {
+    width: 100%;
+    position: relative;
+    margin: 16px 0 0 0;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px #1e355e solid;
+  }
+
+  .menu ul li {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0 !important;
+    float: left;
+    border-bottom: 1px #1e355e solid;
+  }
+
+  .menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1e355e;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  .menu ul li span {
+    display: none;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    float: none;
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 0;
+    padding-left: 25px;
+    border-left: 5px #ffffff solid;
+    border-bottom: none;
+  }
+
+  .menu ul li a:hover {
+    border-left: 5px #1e355e solid;
+    border-bottom: none;
+  }
+
+  .menu ul, .menu ul ul {
+    visibility: visible;
+    opacity: 1;
+    display: none;
+  }
+
+  .menu ul ul li:first-child a:after {
+    content: none;
+  }
+
+  .menu input[type=checkbox]~ul {
+    display: none;
+  }
+
+  .menu input[type=checkbox]~ul ul {
+    display: none;
+  }
+
+  .menu input[type=checkbox]:checked~ul {
+    display: block;
+  }
+
+  .menu input[type=checkbox]:checked~ul ul {
+    display: block;
+  }
+
+  .menu ul ul li:first-child a {
+    margin-top: 0;
+    border-top: 1px #ffffff solid;
+  }
+
+  .menu ul ul li:last-child a {
+    margin-bottom: 0;
+  }
 }
+
 /* ============================================ */
 /* CSS By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */

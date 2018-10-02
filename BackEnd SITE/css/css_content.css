@@ -2,37 +2,150 @@
 /* CSS By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */
 /*== elementos ==*/
-html, body {height:100%;font-family: 'Roboto', sans-serif;font-family: 'Open Sans', sans-serif;background-color: #ffffff;}
-html, body {height:100%;}
-html, body, #wrap {height:100%;}
-body > #wrap {height:auto; min-height:100%;}
-.header-style {width: 100%;height: 80px;float: left;border-top: 5px #c7d8f0 solid;padding-top: 20px;}
-.header-box {width: 100%;max-width: 1240px;margin: 0 auto;padding: 0 20px;}
-.content-style {width: 100%;padding-bottom: 125px;float: left;}
-.content-box {width: 100%;float: left;}
-.footer-style {width: 100%;height: 125px;margin-top: -125px;float: left;position: relative;background-color: #121212;padding-top: 40px;}
-.footer-box {width: 100%;max-width: 520px;margin: 0 auto;padding: 0 20px;}
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+}
+
+html, body {
+  height: 100%;
+}
+
+html, body, #wrap {
+  height: 100%;
+}
+
+body>#wrap {
+  height: auto;
+  min-height: 100%;
+}
+
+.header-style {
+  width: 100%;
+  height: 80px;
+  float: left;
+  border-top: 5px #c7d8f0 solid;
+  padding-top: 20px;
+}
+
+.header-box {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-style {
+  width: 100%;
+  padding-bottom: 125px;
+  float: left;
+}
+
+.content-box {
+  width: 100%;
+  float: left;
+}
+
+.footer-style {
+  width: 100%;
+  height: 125px;
+  margin-top: -125px;
+  float: left;
+  position: relative;
+  background-color: #121212;
+  padding-top: 40px;
+}
+
+.footer-box {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /*== banner ==*/
-.banner {width: 100%;float: left;}
-.banner-box {width: 100%;float: left;}
-.banner-content {width: 100%;float: left;position: relative;}
-.banner-content img {width: 100%;float: left;}
-.banner-content .title-box {width: 100%;float: left;position: absolute;top: 100px;}
-.banner-content .title-box .title {width: 100%;float: left;}
-.banner-content .title-box .title h1 {width: 100%;float: left;font-size: 32px;font-weight: 300;color: #ffffff;line-height: 1;text-align: center;font-family: 'Roboto', sans-serif;}
-.banner-content .title-box .title h1 span {font-weight: bold;}
+.banner {
+  width: 100%;
+  float: left;
+}
+
+.banner-box {
+  width: 100%;
+  float: left;
+}
+
+.banner-content {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.banner-content img {
+  width: 100%;
+  float: left;
+}
+
+.banner-content .title-box {
+  width: 100%;
+  float: left;
+  position: absolute;
+  top: 100px;
+}
+
+.banner-content .title-box .title {
+  width: 100%;
+  float: left;
+}
+
+.banner-content .title-box .title h1 {
+  width: 100%;
+  float: left;
+  font-size: 32px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner-content .title-box .title h1 span {
+  font-weight: bold;
+}
+
 /*== MOBILE ==*/
-@media all and (max-width: 1300px){
-	.banner-content img {height: 200px;}
+@media all and (max-width: 1300px) {
+  .banner-content img {
+    height: 200px;
+  }
 }
-@media all and (max-width: 800px){
-	.header-style {height: auto;padding: 20px 0;}
+
+@media all and (max-width: 800px) {
+  .header-style {
+    height: auto;
+    padding: 20px 0;
+  }
 }
-@media all and (max-width: 767px){
-	.header-style {height: auto;padding: 20px 0;}
-	.header-box {max-width: 100%;margin: 0;padding: 0;float: left;}
-	.banner-content .title-box {top: 70px;}
+
+@media all and (max-width: 767px) {
+  .header-style {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .header-box {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  .banner-content .title-box {
+    top: 70px;
+  }
 }
+
 /* ============================================ */
 /* CSS By NerdWeb - http://nerdweb.com.br */
 /* ============================================ */
