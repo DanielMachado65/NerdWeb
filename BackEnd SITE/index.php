@@ -108,7 +108,7 @@
                   echo <<< EOT
                   <li>
                     <div class="box-news">
-                      <div class="close-news"><a href="formulario-editar.php?pagina=$id">Editar</a></div>
+                      <div class="close-news"><a href="formulario-editar.php?pagina=$id" class="btn btn-danger">Editar</a></div>
                       <div class="post-news">
                         <h3>$titulo</h3>
                         <p>$texto</p>

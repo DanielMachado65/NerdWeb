@@ -12,9 +12,31 @@
 
 require "funcoes.php";
 
+$error = false;
+$success = false;
+$dado = $titulo = $texto = "";
+
 if (isset($_GET['pagina'])) {
   $pagina = $_GET['pagina']+1;
   $dado = carregaRegistro($pagina);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["titulo"]) && isset($_POST["texto"]) && !empty($_POST["texto"]) && !empty($_POST["titulo"])) {
+      $titulo = verifica_campo($_POST["titulo"]);
+      $texto = verifica_campo($_POST["texto"]);
+
+      if(editarNoticia($dado[0], $titulo, $texto)){
+        $success = true;
+      } else {
+        $error = true;
+      }
+    }
+    else {
+      $error_msg = "Por favor, preencha todos os dados corretamente.";
+      $error = true;
+    }
 }
 
 
@@ -69,7 +91,7 @@ if (isset($_GET['pagina'])) {
   <div id="fb-root"></div>
   <!-- Inicio do Header -->
   <div id="wrap">
-    <header class="header-style">
+    <header class="card header-style">
       <div class="header-box">
         <div class="logo">
           <a href="index.php"><img src="img/elements/josemar-perussolo-logo.png" alt=""></a>
@@ -88,6 +110,23 @@ if (isset($_GET['pagina'])) {
     </header>
     <!--Inicio do Content-->
     <section class="content-style">
+<?php
+
+  if ($success) {
+  echo <<< EOT
+  <div class="alert alert-success" role="alert">
+    Foi cadastrado com sucesso
+  </div>
+EOT;
+  } elseif ($error) {
+    echo <<< EOT
+    <div class="alert alert-danger" role="alert">
+       $error_msg
+    </div>
+EOT;
+}
+
+?>
       <div class="content-box">
         <div class="banner">
           <div class="banner-box">
@@ -106,12 +145,12 @@ if (isset($_GET['pagina'])) {
             <div class="news-content">
               <form method="POST">
                 <p><strong>Título</strong></p>
-                <p><input type="text" value="<?php echo $dado[1]; ?>"></p>
+                <p><input name="titulo" type="text" value="<?php echo $dado[1]; ?>"></p>
                 <hr>
                 <p><strong>Texto</strong></p>
                 <p><textarea placeholder="<?php echo $dado[2];?>"></textarea></p>
                 <hr>
-                <button type="submit">Enviar</button>
+                <button name="texto" type="submit">Enviar</button>
               </form>
             </div>
           </div>
