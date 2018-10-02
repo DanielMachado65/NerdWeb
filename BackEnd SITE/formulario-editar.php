@@ -13,7 +13,7 @@
 require "funcoes.php";
 
 if (isset($_GET['pagina'])) {
-  $pagina = $_GET['pagina'];
+  $pagina = $_GET['pagina']+1;
   $dado = carregaRegistro($pagina);
 }
 
@@ -72,7 +72,7 @@ if (isset($_GET['pagina'])) {
     <header class="header-style">
       <div class="header-box">
         <div class="logo">
-          <a href="index.html"><img src="img/elements/josemar-perussolo-logo.png" alt=""></a>
+          <a href="index.php"><img src="img/elements/josemar-perussolo-logo.png" alt=""></a>
         </div>
         <nav class="menu" id="nav">
           <input type="checkbox" id="button" style="display: none;">
