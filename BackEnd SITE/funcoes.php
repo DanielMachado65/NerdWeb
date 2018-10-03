@@ -1,6 +1,6 @@
 <?php
 $configDB["User"] = "root";
-$configDB["Name"] = "backnerdwerb";
+  $configDB["Name"] = "backnerdwerb";
 $configDB["Pass"] = "";
 $configDB["Host"] = "localhost";
 $configDB["Port"] = 3306;

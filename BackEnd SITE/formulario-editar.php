@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["titulo"]) && isset($_POST["texto"]) && !empty($_POST["texto"]) && !empty($_POST["titulo"])) {
       $titulo = verifica_campo($_POST["titulo"]);
       $texto = verifica_campo($_POST["texto"]);
-
       if(editarNoticia($dado[0], $titulo, $texto)){
+        $dado = carregaRegistro($pagina);
         $success = true;
       } else {
         $error = true;
@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
   <!--Inicio fontes-->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -145,12 +146,12 @@ EOT;
             <div class="news-content">
               <form method="POST">
                 <p><strong>Título</strong></p>
-                <p><input name="titulo" type="text" value="<?php echo $dado[1]; ?>"></p>
+                <p><input name="titulo" type="text" placeholder="<?php echo $dado[1]; ?>"></p>
                 <hr>
                 <p><strong>Texto</strong></p>
-                <p><textarea placeholder="<?php echo $dado[2];?>"></textarea></p>
+                <p><textarea name="texto" placeholder="<?php echo $dado[2];?>"></textarea></p>
                 <hr>
-                <button name="texto" type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
               </form>
             </div>
           </div>
